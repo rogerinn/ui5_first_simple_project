@@ -14,7 +14,6 @@
 			"version": "1.40.12"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -31,7 +30,6 @@
 			"phone": true
 		}
 	},
-
 	"sap.ui5": {
 		"flexEnabled": false,
 		"rootView": {
@@ -67,9 +65,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -81,11 +81,15 @@
 				"controlId": "app",
 				"clearControlAggregation": false
 			},
-			"routes": [{
-				"name": "RouteMain",
-				"pattern": "RouteMain",
-				"target": ["TargetMain"]
-			}],
+			"routes": [
+				{
+					"name": "RouteMain",
+					"pattern": "RouteMain",
+					"target": [
+						"TargetMain"
+					]
+				}
+			],
 			"targets": {
 				"TargetMain": {
 					"viewType": "JS",
@@ -93,6 +97,10 @@
 					"clearControlAggregation": false,
 					"viewId": "Main",
 					"viewName": "Main"
+				},
+				"teste1": {
+					"viewType": "HTML",
+					"viewName": "teste1"
 				}
 			}
 		}
