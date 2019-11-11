@@ -12,7 +12,6 @@ sap.ui.define(["sap/m/Button", "sap/m/Label", "sap/m/Input", "sap/m/Select", "sa
 			getControllerName: function () {
 				return "Testes.Testes.controller.Main";
 			},
-
 			/** Is initially called once after the Controller has been instantiated. It is the place where the UI is constructed. 
 			 * Since the Controller is given to this method, its event handlers can be attached right away.
 			 * @memberOf controller.Main
@@ -71,6 +70,7 @@ sap.ui.define(["sap/m/Button", "sap/m/Label", "sap/m/Input", "sap/m/Select", "sa
 					items: [
 						new ColumnListItem({
 							type: "Detail",
+							detailPress: [],
 							cells: [
 								new Text({
 									text: "Frango assado"
@@ -136,10 +136,13 @@ sap.ui.define(["sap/m/Button", "sap/m/Label", "sap/m/Input", "sap/m/Select", "sa
 							type: "Reject"
 						})
 					],
-					contentRight: [new Button({
-                            text: "Salvar Venda",
-                            type: "Accept"
-					})]
+					contentRight: [
+						new Button({
+							text: "Salvar Venda",
+							type: "Accept",
+                            press: [oController.onApproveDialog]
+						})
+					]
 				});
 				var oPage = new sap.m.Page({
 					title: "Cadastro de vendas",

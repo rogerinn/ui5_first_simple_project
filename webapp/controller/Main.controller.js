@@ -18,21 +18,22 @@ sap.ui.define([
 		},
 		onApproveDialog: function () {
 			var dialog = new Dialog({
-				title: "Confirm",
+				title: "Confirmar venda",
 				type: "Message",
 				content: new Text({
-					text: "Deseja confirmar a compra?"
+					text: "Deseja confirmar?"
 				}),
 				beginButton: new Button({
 					type: ButtonType.Accept,
-					text: "Confirmar a compra",
+					text: "Confirmar",
 					press: function () {
 						MessageToast.show("Submit pressed!");
 						dialog.close();
 					}
 				}),
 				endButton: new Button({
-					text: "Fechar tela",
+					text: "Sair",
+					type: "Reject",
 					press: function () {
 						dialog.close();
 					}
