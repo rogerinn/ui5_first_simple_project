@@ -5,7 +5,8 @@
   "private": true,
   "devDependencies": {
     "@ui5/cli": "1.7.0",
-    "@sap/ui5-builder-webide-extension": "1.0.9"
+    "@sap/ui5-builder-webide-extension": "1.0.9",
+    "eslint": ">=4.18.2"
   },
   "scripts": {
     "build": "ui5 build --include-task=generateManifestBundle generateCachebusterInfo"
