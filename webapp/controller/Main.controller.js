@@ -20,9 +20,9 @@ sap.ui.define([
 			var dialog = new Dialog({
 				title: "Confirmar venda",
 				type: "Message",
-				content: new Text({
-					text: "Deseja confirmar?"
-				}),
+				content: [new Label({
+					text: "Deseja confirmar a venda?"
+				})],
 				beginButton: new Button({
 					type: ButtonType.Accept,
 					text: "Confirmar",
@@ -34,6 +34,35 @@ sap.ui.define([
 				endButton: new Button({
 					text: "Sair",
 					type: "Reject",
+					press: function () {
+						dialog.close();
+					}
+				}),
+				afterClose: function () {
+					dialog.destroy();
+				}
+			});
+
+			dialog.open();
+		},
+		onDeleteDiaolog: function () {
+			var dialog = new Dialog({
+				type: "Message",
+				title: "Confirmação",
+				content: [new Label({
+					text: "Deseja deletar a venda?"
+				})],
+				beginButton: new Button({
+					type: "Reject",
+					text: "Deletar",
+					press: function () {
+						MessageToast.show("Submit pressed!");
+						dialog.close();
+					}
+				}),
+				endButton: new Button({
+					text: "Sair",
+					type: "Ghost",
 					press: function () {
 						dialog.close();
 					}

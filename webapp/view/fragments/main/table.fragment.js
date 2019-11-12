@@ -8,7 +8,7 @@ sap.ui.define(["sap/m/Table", "sap/m/ColumnListItem", "sap/m/Text", "sap/m/Label
 				items: [
 					new ColumnListItem({
 						type: "Detail",
-						detailPress: [],
+						detailPress: [oController.onDeleteDiaolog],
 						cells: [
 							new Text({
 								text: "Frango assado"
