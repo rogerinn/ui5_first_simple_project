@@ -97,10 +97,6 @@
 					"clearControlAggregation": false,
 					"viewId": "Main",
 					"viewName": "Main"
-				},
-				"teste1": {
-					"viewType": "HTML",
-					"viewName": "teste1"
 				}
 			}
 		}

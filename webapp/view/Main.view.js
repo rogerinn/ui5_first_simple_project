@@ -22,6 +22,7 @@ sap.ui.define(["sap/m/Button", "sap/m/Label", "sap/m/Input", "sap/m/Select", "sa
 					title: "Suas vendas",
 					editable: true,
 					content: [
+						sap.ui.jsfragment("my.own.frag", oController),
 						new Label({
 							text: "Empresa"
 						}),
@@ -133,14 +134,14 @@ sap.ui.define(["sap/m/Button", "sap/m/Label", "sap/m/Input", "sap/m/Select", "sa
 					contentLeft: [
 						new Button({
 							text: "Editar Venda",
-							type: "Reject"
+							type: "Up"
 						})
 					],
 					contentRight: [
 						new Button({
 							text: "Salvar Venda",
 							type: "Accept",
-                            press: [oController.onApproveDialog]
+							press: [oController.onApproveDialog]
 						})
 					]
 				});
