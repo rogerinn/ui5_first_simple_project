@@ -1,0 +1,11 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+			Namespace="vendas_pkg.servico">
+			<EntityType Name="tabela_vendasType">
+				<Key><PropertyRef Name="ID"/></Key><Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="25"/><Property Name="empresa" Type="Edm.String" Nullable="false" MaxLength="255"/><Property Name="produto" Type="Edm.String" Nullable="false" MaxLength="255"/><Property Name="quantidade" Type="Edm.Int32" Nullable="false"/><Property Name="preco" Type="Edm.Decimal" Nullable="false" Precision="12" Scale="3"/><Property Name="preco_total" Type="Edm.Decimal" Nullable="false" Precision="12" Scale="3"/><Property Name="data_venda" Type="Edm.DateTime" Nullable="false"/></EntityType>
+			<EntityContainer Name="servico" m:IsDefaultEntityContainer="true"><EntitySet Name="tabela_vendas" EntityType="vendas_pkg.servico.tabela_vendasType"/></EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

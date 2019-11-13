@@ -10,8 +10,17 @@
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
 		"sourceTemplate": {
-			"id": "ui5template.basicSAPUI5ApplicationProject",
-			"version": "1.40.12"
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"servico.xsodata": {
+				"uri": "/HANA_SERVICE/vendas_pkg/servico.xsodata/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml"
+				}
+			}
 		}
 	},
 	"sap.ui": {
@@ -61,6 +70,16 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"settings": {},
 				"uri": "model/data.json",
+				"preload": true
+			},
+			"hanadb": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "servico.xsodata",
 				"preload": true
 			}
 		},
