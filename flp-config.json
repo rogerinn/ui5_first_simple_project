@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "Testes.Testes.Testes",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#Testes-Display",
+        "navigationComponentName": "Testes.Testes",
+        "intentSemanticObject": "Testes",
+        "intentAction": "Display",
+        "html5ApplicationName": "testes",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "dfe02790-2566-4134-b306-92400145d7d7"
+        ],
+        "contentPackages": [
+            "b3e76b3b-f716-436f-b06a-3b7288f9badf"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "DynamicTile",
+        "title": "SociumIt",
+        "subtitle": "Frango Assado",
+        "searchKeywords": "SociumIt,Frango Assado",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "/sap/fiori/testes/HANA_SERVICE/vendas_pkg/servico.xsodata/tabela_vendas/$count",
+        "refreshInterval": 10,
+        "displayNumberUnit": "Vendas realizadas"
+    }
+}
